@@ -1,0 +1,10 @@
+1. Convert the Employee class into an abstract class.
+   - Make the method `work() abstract inside it.
+   - Remove any implementation of work() from Employee.
+
+2. Create an interface called Eatable.
+   - It should have one method: void eat();
+
+3. Have both Chef and Waiter implement the interface Eatable.
+   - In Chef, make eat() print: "Chef [name] is tasting the food."
+   - In Waiter, make eat() print: "Waiter [name] is having a quick meal break."
