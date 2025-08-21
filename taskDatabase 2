@@ -1,0 +1,64 @@
+create table Doctor contain
+
+id, name , salary , address
+----------------------------------
+please insert 10 row with Data as you like 
+-----------------------------------------
+update record number 3 with salary 20000
+----------------------------------
+delete record number 9
+-----------------------------------------
+ please Concatenation all name with salary  of all rows
+----------------------------------
+display all record with salary * 2
+-----------------------------------------
+ select all data with salary  1000 , 2000 , 3000 
+----------------------------------
+rename table Doctor to PRD_DOCTOR
+
+
+sol ->>>>>>>>>>>>>>>
+
+CREATE TABLE doctor (
+id number(3),
+name varchar2(15),
+salary number,
+address varchar2(30)
+);
+
+ALTER TABLE doctor MODIFY address varchar2(50); 
+
+SELECT * FROM doctor ;
+TRUNCATE TABLE doctor ;
+
+INSERT ALL
+  INTO doctor (id, name, salary, address) VALUES (1, 'killua', 18000, '2007 Zagora St')
+  INTO doctor (id, name, salary, address) VALUES (2, 'gon', 10000, '93091 Calle della Testa')
+  INTO doctor (id, name, salary, address) VALUES (3, 'kounde', 12000, '2017 Shinjuku-ku')
+  INTO doctor (id, name, salary, address) VALUES (4, 'lamine', 15500, '9450 Kamiya-cho')
+  INTO doctor (id, name, salary, address) VALUES (5, 'pedri', 14000, '2014 Jabberwocky Rd')
+  INTO doctor (id, name, salary, address) VALUES (6, 'give', 13000, '2011 Interiors Blvd')
+  INTO doctor (id, name, salary, address) VALUES (7, 'balde', 12500, '2004 Charade Rd')
+  INTO doctor (id, name, salary, address) VALUES (8, 'eric', 11000, '40-5-12 Laogianggen')
+  INTO doctor (id, name, salary, address) VALUES (9, 'rapha', 15000, '12-98 Victoria Street')
+  INTO doctor (id, name, salary, address) VALUES (10, 'lewy', 16000, '9702 Chester Road')
+SELECT * FROM dual;
+
+UPDATE doctor
+SET salary = 20000
+WHERE id = 3 ;
+
+DELETE FROM doctor WHERE id = 9 ;
+
+SELECT name || ','|| salary AS "name & salary" FROM doctor ; 
+
+SELECT salary , salary*2 FROM doctor ;
+
+SELECT  * FROM doctor WHERE salary < 14000 ; 
+
+
+ALTER TABLE doctor  rename to PRD_DOCTOR ;
+
+SELECT * FROM PRD_DOCTOR ;
+
+
