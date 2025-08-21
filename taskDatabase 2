@@ -61,4 +61,73 @@ ALTER TABLE doctor  rename to PRD_DOCTOR ;
 
 SELECT * FROM PRD_DOCTOR ;
 
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+create Employees table wiith column ( EmployeeID, FirstName, LastName, Department, Salary )
+----------------------------------------------------------------
+Insert a new record into the Employees table.
+
+EmployeeID     FirstName   LastName  Department      Salary
+101            'John1'      'Doe1'     'HR'            20000
+102            'John2'      'Doe2'     'IT'            50000
+103            'John3'      'Doe3'     'CS'            40000
+104            'John4'      'Doe4'     'IT'            10000
+105            'John5'      'Doe5'     'ZX'            30000
+-----------------------------------------------------------------------------------------
+Update the salary of an employee to 600000 with EmployeeID     101.
+-----------------------------------------------------------------
+Delete a record of an employee who Department = 101.
+----------------------------------------------------------------
+Retrieve all employees in the IT department.
+---------------------------------------------------------------
+select * data from table but conatination  FirstName, LastName as one column
+-----------------------------------------------------------------------------------
+
+
+
+sol ->>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+CREATE TABLE Employees_cope (EmployeeID NUMBER , FirstName varchar2(20), LastName varchar2(20), Department varchar2(20), Salary NUMBER ) ;
+
+SELECT * FROM Employees_cope;
+
+INSERT ALL
+INTO Employees_cope( EmployeeID, FirstName, LastName, Department, Salary ) VALUES (101 ,'John1',  'Doe1' ,'HR' ,20000)
+INTO  Employees_cope( EmployeeID, FirstName, LastName, Department, Salary ) VALUES (102,'John2','Doe2','IT' , 50000)
+INTO  Employees_cope( EmployeeID, FirstName, LastName, Department, Salary ) VALUES (103,'John3','Doe3','CS' , 40000)
+INTO  Employees_cope( EmployeeID, FirstName, LastName, Department, Salary ) VALUES (104,'John4','Doe4','IT' , 10000)
+INTO  Employees_cope( EmployeeID, FirstName, LastName, Department, Salary ) VALUES (105,'John5','Doe5','ZX' , 30000)
+SELECT * FROM dual ;
+
+
+
+UPDATE Employees_cope
+SET salary = 600000
+WHERE EMPLOYEEID = 101 ;
+
+
+DELETE Employees_cope 
+WHERE EMPLOYEEID = 101 ;
+
+
+
+SELECT * FROM Employees_cope WHERE DEPARTMENT = 'IT' ;
+
+
+SELECT FIRSTname || ',' || lastname AS "full name "  FROM Employees_cope ;
+
+
+
+
+
+
+
+
+
+
+
 
