@@ -1,0 +1,83 @@
+-- Q1. Create a table called EMP_TEST with a column NAME having leading and trailing spaces.
+-- Q2. Display all names using TRIM to remove both leading and trailing spaces.
+-- Q3. Use LTRIM to remove only leading spaces.
+-- Q4. Use RTRIM to remove only trailing spaces.
+-- Q5. Use TRIM to remove a specific character (e.g., ‘*’ or ‘#’) from both sides of a string.
+
+
+
+
+CREATE TABLE emp_test (
+    name VARCHAR2(50)
+);
+
+SELECT * FROM emp_test ;
+
+
+INSERT INTO emp_test (name) VALUES ('   Islam   ');
+INSERT INTO emp_test (name) VALUES ('   Omar');
+INSERT INTO emp_test (name) VALUES ('Ali   ');
+INSERT INTO emp_test (name) VALUES ('   Mona   ');
+INSERT INTO emp_test (name) VALUES ('#doffy.e.g*');
+
+
+SELECT '"' || name || '"' AS original_value,
+       '"' || TRIM(name) || '"' AS trimmed_value
+FROM emp_test;
+
+SELECT  '"' || name || '"' AS original_value,
+       '"' || LTRIM(name) || '"' AS trimmed_value
+       FROM emp_test ;
+
+SELECT  '"' || name || '"' AS original_value,
+       '"' || RTRIM(name) || '"' AS trimmed_value
+       FROM emp_test ;
+
+
+SELECT name , TRIM(name) FROM EMP_TEST et ;
+
+
+
+SELECT  TRIM(BOTH '*' FROM '****islam*****')
+       FROM emp_test ;
+
+
+SELECT name , LTRIM(RTRIM (name , '.e.g*' ),'#') FROM emp_test ;
+
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+-- Q1. Use REPLACE to replace the letter 'a' with '@' in the word 'database'.
+-- Q2. Use REPLACE to replace a full word in a string (e.g., "old" with "new").
+-- Q3. Create a table PRODUCT with a product_name column, and insert 3 sample products.
+-- Q4. Use LPAD to format product names to 15 characters by padding with '*' on the left.
+-- Q5. Use RPAD to format product names to 15 characters by padding with '#' on the right.
+
+
+
+SELECT REPLACE('database', 'a', '@') AS rpl FROM dual;
+
+
+SELECT REPLACE('This is the old version', 'old', 'new') AS rpl
+FROM dual;
+
+
+CREATE TABLE PRODUCT (
+product_name varchar2(50)
+);
+
+
+INSERT INTO PRODUCT (product_name) VALUES ('cola');
+INSERT INTO PRODUCT (product_name) VALUES ('duo');
+INSERT INTO PRODUCT (product_name) VALUES ('lemon');
+
+SELECT * FROM PRODUCT p ;
+
+SELECT LPAD(product_name , '15' ,'*') AS lpad FROM PRODUCT p ;
+
+SELECT RPAD(product_name , '15' ,'#') AS lpad FROM PRODUCT p ;
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
