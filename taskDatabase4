@@ -79,4 +79,35 @@ SELECT RPAD(product_name , '15' ,'#') AS lpad FROM PRODUCT p ;
 
 ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+-- Q1. Display current date in the format 'DD-MON-YYYY'.
+-- Q2. Display current date in the format 'Month YYYY'.
+-- Q3. Convert a number to character using TO_CHAR with formatting (e.g., 12345.67 as '12,345.67').
+-- Q4. Show salary formatted with a currency symbol.
+
+
+
+SELECT SALARY  FROM EMPLOYEES ;
+
+SELECT FIRST_NAME , HIRE_DATE , TO_CHAR(HIRE_DATE , 'DD,MON,YYYY') AS AFTER_formatting FROM EMPLOYEES  ;
+
+SELECT FIRST_NAME , HIRE_DATE , TO_CHAR(HIRE_DATE , 'month,YYYY') AS AFTER_formatting FROM EMPLOYEES  ;
+
+
+SELECT TO_CHAR(12345.67, '99,999.99') AS formatted_number
+FROM dual;
+
+
+
+
+
+
+SELECT salary AS original_salary,
+       TO_CHAR(salary, '$9,99999') AS formatted_salary
+FROM employees;
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
 
