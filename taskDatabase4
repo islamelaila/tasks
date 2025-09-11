@@ -47,7 +47,6 @@ SELECT name , LTRIM(RTRIM (name , '.e.g*' ),'#') FROM emp_test ;
 
 ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
 -- Q1. Use REPLACE to replace the letter 'a' with '@' in the word 'database'.
 -- Q2. Use REPLACE to replace a full word in a string (e.g., "old" with "new").
 -- Q3. Create a table PRODUCT with a product_name column, and insert 3 sample products.
