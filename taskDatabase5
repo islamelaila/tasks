@@ -224,3 +224,19 @@ CREATE TABLE Teacher (
 
 
 
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Pls create this tables with relation
+----------------------------------------
+create Employee with 
+id name age
+
+create Phone with
+id phoneNumber 
+
+Employee has only Phone
+Phone has only Employee
+
+
