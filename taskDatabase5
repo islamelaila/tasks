@@ -1,1 +1,48 @@
 
+PLS create Player table with
+id name age
+- make id not null
+- make id unique
+- make name unique
+----------------------------------------------------
+pls create Manger with
+id name salary
+-id must be not null
+-id and name must be unique together
+
+-------------------------------------------------
+pls create Manger with
+id name age
+
+make id not null and unique (Primary Key)
+------------------------------------------------
+
+
+
+CREATE TABLE player (
+ 
+player_id NUMBER NOT NULL UNIQUE  ,
+player_name varchar2(50) UNIQUE ,
+player_age varchar2(50)
+
+);
+
+CREATE TABLE Manger (
+ 
+Manger_id NUMBER NOT NULL   ,
+Manger_name varchar2(50)  ,
+Manger_salary varchar2(50),
+CONSTRAINT  composite_unique UNIQUE (Manger_id ,Manger_name )
+
+);
+
+
+
+CREATE TABLE Manger (
+ 
+Manger_id NUMBER CONSTRAINT manger_id_pk PRIMARY KEY  ,
+Manger_name varchar2(50)  ,
+Manger_age varchar2(50)
+
+);
+
