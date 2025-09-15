@@ -164,5 +164,28 @@ patient has many doctor
 
 
 
+CREATE TABLE Doctor (
+    Doctor_id    NUMBER PRIMARY KEY,
+    Doctor_name  VARCHAR2(50) NOT NULL,
+    Doctor_salary NUMBER
+);
+
+CREATE TABLE Patient (
+    Patient_id   NUMBER PRIMARY KEY,
+    Patient_name VARCHAR2(50) NOT NULL,
+    Patient_age  NUMBER
+);
+
+CREATE TABLE Doctor_Patient (
+    Doctor_id  NUMBER NOT NULL,
+    Patient_id NUMBER NOT NULL,
+    CONSTRAINT fk_doctor FOREIGN KEY (Doctor_id) REFERENCES Doctor(Doctor_id),
+    CONSTRAINT fk_patient FOREIGN KEY (Patient_id) REFERENCES Patient(Patient_id),
+    CONSTRAINT uq_doctor_patient UNIQUE (Doctor_id, Patient_id) -- avoid duplicates
+);
+
+
+
+
 
 
