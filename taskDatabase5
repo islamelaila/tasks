@@ -23,7 +23,7 @@ CREATE TABLE player (
  
 player_id NUMBER NOT NULL UNIQUE  ,
 player_name varchar2(50) UNIQUE ,
-player_age varchar2(50)
+player_age NUMBER
 
 );
 
@@ -42,7 +42,51 @@ CREATE TABLE Manger (
  
 Manger_id NUMBER CONSTRAINT manger_id_pk PRIMARY KEY  ,
 Manger_name varchar2(50)  ,
-Manger_age varchar2(50)
+Manger_age NUMBER
 
 );
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+create Doctor with 
+id name salary
+
+create Patient with
+id name age
+
+doctor has many patient
+patient has many doctor
+
+- please create classes with relation
+
+
+CREATE TABLE Doctor (
+    Doctor_id    NUMBER PRIMARY KEY,
+    Doctor_name  VARCHAR2(50) NOT NULL,
+    Doctor_salary NUMBER
+);
+
+CREATE TABLE Patient (
+
+    Patient_id   NUMBER PRIMARY KEY,
+    Patient_name VARCHAR2(50) NOT NULL,
+    Patient_age  NUMBER
+);
+
+CREATE TABLE doctor_patient (
+
+    Doctor_id  NUMBER NOT NULL,
+    Patient_id NUMBER NOT NULL,
+    CONSTRAINT Doctor_id_fk FOREIGN KEY (Doctor_id) REFERENCES Doctor (Doctor_id),
+    CONSTRAINT Patient_id_fk FOREIGN KEY (Patient_id) REFERENCES Patient (Patient_id),
+    CONSTRAINT Doctor_Patient_composite UNIQUE (Doctor_id, Patient_id)
+);
+
+
+
+
+
+
+
 
