@@ -147,6 +147,21 @@ CREATE TABLE Phone (
 
 
 
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+Pls create this tables with relation
+----------------------------------------
+create Doctor with 
+id name salary
+
+create Patient with
+id name age
+
+doctor has many patient
+patient has many doctor
+
 
 
 
