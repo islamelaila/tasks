@@ -128,3 +128,26 @@ Employee has only Phone
 Phone has only Employee
 
 
+
+
+CREATE TABLE Employee (
+    Employee_id   NUMBER PRIMARY KEY,
+    Employee_name VARCHAR2(50) NOT NULL,
+    Employee_age  NUMBER
+);
+
+CREATE TABLE Phone (
+    Phone_id      NUMBER PRIMARY KEY,
+    Phone_number  VARCHAR2(20) NOT NULL UNIQUE,
+    Employee_id   NUMBER UNIQUE,  
+    CONSTRAINT fk_phone_employee FOREIGN KEY (Employee_id) REFERENCES Employee(Employee_id)
+);
+
+
+
+
+
+
+
+
+
