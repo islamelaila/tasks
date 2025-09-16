@@ -118,3 +118,28 @@ DROP CONSTRAINT fk_order_customer;
 ALTER TABLE Contacts
 MODIFY phone VARCHAR2(20) NULL;
 
+
+
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+4. Renaming Constraints (Code Samples)
+Rename a CHECK constraint named chk_age to check_min_age on the Students table.
+
+Rename a FOREIGN KEY constraint fk_emp_dept to fk_employee_department on the Employees table.
+
+Rename the PRIMARY KEY constraint on the Users table to pk_users_id.
+
+Write SQL to rename the UNIQUE constraint on the username column to uk_user_name.
+
+Provide the syntax to rename a constraint in SQL Server vs PostgreSQL.
+
+
+
+
+
+
+
+
