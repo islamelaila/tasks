@@ -163,3 +163,42 @@ ALTER TABLE Users RENAME CONSTRAINT uq_username TO uk_user_name;
 
 
 
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+5. Disabling Constraints (Code Samples)
+Disable a FOREIGN KEY constraint named fk_customer_order on the Orders table.
+
+Temporarily disable all constraints on the Products table.
+
+Write SQL to disable the CHECK constraint on the Accounts.balance column.
+
+Disable the PRIMARY KEY constraint on Departments(dept_id).
+
+How would you disable all constraints on a table before bulk inserting data?
+
+
+
+
+
+ALTER TABLE Orders
+DISABLE CONSTRAINT fk_customer_order;
+
+
+
+ALTER TABLE Products DISABLE ALL CONSTRAINTS;
+
+
+
+ALTER TABLE Accounts
+DISABLE CONSTRAINT chk_balance;
+
+
+ALTER TABLE Departments
+DISABLE PRIMARY KEY;
+
+ALTER TABLE Products DISABLE ALL CONSTRAINTS;
+
+ALTER TABLE Products ENABLE ALL CONSTRAINTS;
+
