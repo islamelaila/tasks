@@ -53,8 +53,25 @@ Add a PRIMARY KEY constraint to the Departments table on the dept_id column.
 
 
 
+ALTER TABLE Customers
+MODIFY email VARCHAR2(100) NOT NULL;
+
+
+ALTER TABLE Users
+ADD CONSTRAINT uq_username UNIQUE (username);
 
 
 
+ALTER TABLE Orders
+ADD CONSTRAINT fk_orders_customer FOREIGN KEY (customer_id)
+REFERENCES Customers(id);
 
+
+ALTER TABLE Accounts
+ADD CONSTRAINT chk_balance CHECK (balance >= 0);
+
+
+
+ALTER TABLE Departments
+ADD CONSTRAINT pk_dept PRIMARY KEY (dept_id);
 
