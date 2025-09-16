@@ -140,6 +140,26 @@ Provide the syntax to rename a constraint in SQL Server vs PostgreSQL.
 
 
 
+ALTER TABLE Students
+RENAME CONSTRAINT chk_age TO check_min_age;
+
+
+ALTER TABLE Employees
+RENAME CONSTRAINT fk_emp_dept TO fk_employee_department;
+
+
+ALTER TABLE Users
+RENAME CONSTRAINT SYS_C001234 TO pk_users_id;
+
+
+ALTER TABLE Users
+RENAME CONSTRAINT uq_username TO uk_user_name;
+
+
+ALTER TABLE Students RENAME CONSTRAINT chk_age TO check_min_age;
+ALTER TABLE Employees RENAME CONSTRAINT fk_emp_dept TO fk_employee_department;
+ALTER TABLE Users RENAME CONSTRAINT users_pkey TO pk_users_id;
+ALTER TABLE Users RENAME CONSTRAINT uq_username TO uk_user_name;
 
 
 
