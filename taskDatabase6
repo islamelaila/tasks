@@ -202,3 +202,57 @@ ALTER TABLE Products DISABLE ALL CONSTRAINTS;
 
 ALTER TABLE Products ENABLE ALL CONSTRAINTS;
 
+
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+6. Enabling Constraints (Code Samples)
+Enable the FOREIGN KEY constraint fk_customer_order on the Orders table.
+
+Re-enable all constraints on the Products table after a data load.
+
+Write SQL to enable a CHECK constraint on salary in the Staff table.
+
+Enable the PRIMARY KEY constraint on Departments(dept_id) after it was disabled.
+
+How do you enable a constraint only if it's currently disabled?
+
+
+
+
+
+
+
+ALTER TABLE Orders
+ENABLE CONSTRAINT fk_customer_order;
+
+
+ALTER TABLE Products ENABLE ALL CONSTRAINTS;
+
+
+ALTER TABLE Staff
+ENABLE CONSTRAINT chk_salary;
+
+
+ALTER TABLE Departments
+ENABLE PRIMARY KEY;
+
+
+
+DECLARE
+   status VARCHAR2(8);
+BEGIN
+   SELECT status INTO v_status
+   FROM user_constraints
+   WHERE table_name = 'STAFF'
+     AND constraint_name = 'CHK_SALARY';
+
+   IF status = 'DISABLED' THEN  EXECUTE IMMEDIATE 'ALTER TABLE Staff ENABLE CONSTRAINT chk_salary';
+   END IF;
+END;
+/
+
+
