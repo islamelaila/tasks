@@ -40,6 +40,20 @@ CREATE TABLE Students (
 ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+2. Adding Constraints via ALTER TABLE (Code Samples)
+Add a NOT NULL constraint to the email column in the Customers table.
+
+Add a UNIQUE constraint to the username column in the Users table.
+
+Add a FOREIGN KEY constraint on Orders.customer_id referencing Customers(id).
+
+Use ALTER TABLE to add a CHECK constraint to the Accounts table to ensure balance >= 0.
+
+Add a PRIMARY KEY constraint to the Departments table on the dept_id column.
+
+
+
+
 
 
 
