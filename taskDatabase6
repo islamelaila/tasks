@@ -95,3 +95,26 @@ Write SQL to remove a NOT NULL constraint from the phone column in the Contacts 
 
 
 
+ALTER TABLE Employees
+DROP CONSTRAINT chk_salary;
+
+
+
+ALTER TABLE Users
+DROP CONSTRAINT uq_email;
+
+
+
+ALTER TABLE Products
+DROP PRIMARY KEY;
+
+
+
+ALTER TABLE Orders
+DROP CONSTRAINT fk_order_customer;
+
+
+
+ALTER TABLE Contacts
+MODIFY phone VARCHAR2(20) NULL;
+
