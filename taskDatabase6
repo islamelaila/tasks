@@ -75,3 +75,23 @@ ADD CONSTRAINT chk_balance CHECK (balance >= 0);
 ALTER TABLE Departments
 ADD CONSTRAINT pk_dept PRIMARY KEY (dept_id);
 
+
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+ 3. Dropping (Removing) Constraints (Code Samples)
+Drop a CHECK constraint named chk_salary from the Employees table.
+
+Remove the UNIQUE constraint on email from the Users table.
+
+Drop the PRIMARY KEY from the Products table.
+
+Drop a FOREIGN KEY constraint named fk_order_customer from the Orders table.
+
+Write SQL to remove a NOT NULL constraint from the phone column in the Contacts table.
+
+
+
+
+
