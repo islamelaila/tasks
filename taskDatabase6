@@ -1,0 +1,11 @@
+1. CHECK Constraint (Code Samples)
+Create a table Employees with a CHECK constraint that ensures age is greater than or equal to 18.
+
+Write a SQL query to enforce that salary in a Staff table must be between 3000 and 10000.
+
+Add a CHECK constraint to an existing table Products that ensures price is greater than 0.
+
+Create a table Students where the grade column only allows values from A to F using a CHECK constraint.
+
+
+
