@@ -50,5 +50,100 @@ SELECT employee_name , job_titles FROM employees  NATURAL JOIN jobs ;
 ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+Write a query to display employee names and department names by joining the employees and departments tables using the USING clause on department_id.
+
+Write a query to list all orders and their corresponding customer names using the USING clause on customer_id.
+
+Write a query to retrieve product names and supplier names from the products and suppliers tables using the USING clause on supplier_id.
+
+Write a query to show student names and course titles by joining students and enrollments using the USING clause on student_id.
+
+Write a query to display invoice numbers and product names by joining invoices and products using the USING clause on product_id.
+
+Write a query to list project names and employee names using the USING clause on project_id.
+
+Write a query to retrieve author names and book titles using the USING clause on author_id.
+
+Write a query to show sales order details with employee names using the USING clause on employee_id.
+
+Write a query to display course schedules and instructor names using the USING clause on instructor_id.
+
+Write a query to list transactions along with account holder names using the USING clause on account_id.
+
+
+
+  sol ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+SELECT FIRST_NAME , DEPARTMENT_NAME FROM EMPLOYEES e JOIN DEPARTMENTS d 
+USING (department_id);
+
+SELECT order_id, order_date, customer_name
+FROM orders 
+JOIN customers 
+USING (customer_id);
+
+
+SELECT product_name, supplier_name
+FROM products 
+JOIN suppliers 
+USING (supplier_id);
+
+
+SELECT student_name, course_title
+FROM students 
+JOIN enrollments 
+USING (student_id)
+JOIN courses 
+USING (course_id);
+
+
+SELECT invoice_number, product_name
+FROM invoices 
+JOIN products 
+USING (product_id);
+  
+
+
+SELECT project_name, employee_name
+FROM projects 
+JOIN project_assignments 
+USING (project_id)
+JOIN employees 
+USING (employee_id);
+
+
+
+SELECT author_name, book_title
+FROM authors 
+JOIN books 
+USING (author_id);
+
+
+
+SELECT order_id, employee_name
+FROM sales_orders 
+JOIN employees 
+USING (employee_id);
+
+
+
+SELECT schedule_time, instructor_name
+FROM schedules 
+JOIN instructors 
+USING (instructor_id);
+
+
+
+
+SELECT transaction_id, account_holder_name
+FROM transactions 
+JOIN accounts 
+USING (account_id);
+
+
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 
   
